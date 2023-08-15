@@ -1,6 +1,6 @@
 # Manatee
 
-## **Overview**
+## Overvie
 
 Manatee variational autoencoder (VAE) model predicts transcription factor (TF) perturbation-induced transcriptomes. The workflow of Manatee is shown in the following schematics. Specifically:
 
