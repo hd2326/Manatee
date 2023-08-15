@@ -16,6 +16,7 @@ We use the [GSE72857](https://pubmed.ncbi.nlm.nih.gov/26627738/) dataset as an e
 
 **Directory Tree**
 
+```
 ./GSE72857/
 |-- benchmark
 |-- model
@@ -23,6 +24,7 @@ We use the [GSE72857](https://pubmed.ncbi.nlm.nih.gov/26627738/) dataset as an e
 |-- processed
 |-- random
 `-- screen
+```
 
 **Model Training:**
 ```
