@@ -33,4 +33,6 @@ A pre-trained model can be found at ```./GSE72857/model/```
 
 **Model Benchmarking:**
 
-The "predict" mode reconstruct transcriptomes (X')
+We examined whether Manatee is able to capture biological information, by benchmarking the two modes. The “predict” mode encodes original transcriptomes (X), reparametrizes the latent space as decoder inputs Z<*>, and reconstructs transcriptomes (X’). The “generate” mode, on the other hand, directly decodes X’ from Z*.
+
+The "predict" mode reconstruct transcriptomes (X') from original expression profiles (X). The "generate"
