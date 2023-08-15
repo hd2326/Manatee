@@ -12,9 +12,9 @@ To assess if a perturbation yields the desired transcriptomic phenotype, the rel
 
 ![Manatee](https://github.com/hd2326/Manatee/blob/main/images/manatee.png)
 
-We use the [GSE72857](https://pubmed.ncbi.nlm.nih.gov/26627738/) dataset as an example to show the Manatee functions.
-
 **Data Processing**
+
+We use the [GSE72857](https://pubmed.ncbi.nlm.nih.gov/26627738/) dataset as an example to show the Manatee functions.
 
 Assuming we are at the root directory of the Manatee repository. The rawdata can be found in ```./GSE72857/processed/```. Further data processing for sections **_In Silico_ Perturbation** and **_In Silico_ Screening** can be done by running ```processed.R```. The yielded data files are provided in ```./GSE72857/perturb/``` and ```./GSE72857/screen/``` respectively for reproducing our results.
 
