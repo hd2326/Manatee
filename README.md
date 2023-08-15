@@ -14,9 +14,11 @@ To assess if a perturbation yields the desired transcriptomic phenotype, the rel
 
 We use the [GSE72857](https://pubmed.ncbi.nlm.nih.gov/26627738/) dataset as an example to show the Manatee functions.
 
-**Model Training:**
+**Data Pre-Processing**
 
-Assuming we are at the root directory of the Manatee repository: 
+Assuming we are at the root directory of the Manatee repository. The rawdata can be found in ```./GSE72857/processed/```.
+
+**Model Training:**
 
 ```
 vae=./src/train_vae.py
