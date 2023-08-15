@@ -54,7 +54,8 @@ python3 $vae --job=basic --mode=predict --data_path=$x_path --gene_path=$gene_pa
 python3 $vae --job=basic --mode=generate --data_path=$z_path --gene_path=$gene_path --tf_path=$tf_path --model_path=$model_path --out_dir=$out_dir --depth=3
 ```
 
-And here are the results:
+And here are the results, which show the recapitulation of transcriptomes (X'=X):
 
 ![benchmark](https://github.com/hd2326/Manatee/blob/main/images/benchmark.png)
+
 
