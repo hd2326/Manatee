@@ -29,7 +29,7 @@ out_dir=./GSE72857/model/
 python3 $vae --job=$job --data_path=$data_path --gene_path=$gene_path --tf_path=$tf_path --out_dir=$out_dir --depth=3
 ```
 
-A pre-trained model can be found at ```./GSE72857/model/```
+A pre-trained model can be found [here](https://pubmed.ncbi.nlm.nih.gov/26627738/).
 
 **Model Benchmarking:**
 
