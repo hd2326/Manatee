@@ -54,10 +54,21 @@ python3 $vae --job=basic --mode=predict --data_path=$x_path --gene_path=$gene_pa
 python3 $vae --job=basic --mode=generate --data_path=$z_path --gene_path=$gene_path --tf_path=$tf_path --model_path=$model_path --out_dir=$out_dir --depth=3
 ```
 
-And here are the results, which show that both modes could recapitulate original transcriptomes (X'=X):
+The results show that both modes could recapitulate original transcriptomes (X'=X):
 
 ![benchmark](https://github.com/hd2326/Manatee/blob/main/images/benchmark.png)
 
 **_In Silico_ Perturbation**
 
 We use Manatee to 
+
+```
+vae=./src/train_vae.py
+gene_path=./GSE72857/processed/genes.txt
+tf_path=./GSE72857/processed/tfs.txt
+model_path=./GSE72857/model/GSE72857best_fold.pt
+z_path=./GSE72857/perturb/z_perturb.csv.gz
+out_dir=./GSE72857/perturb/
+
+python3 $vae --job=perturb --mode=generate --data_path=$z_path --gene_path=$gene_path --tf_path=$tf_path --model_path=$model_path --out_dir=$out_dir --depth=3
+```
