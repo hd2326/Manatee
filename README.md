@@ -16,7 +16,7 @@ We use the [GSE72857](https://pubmed.ncbi.nlm.nih.gov/26627738/) dataset as an e
 
 **Model Training:**
 
-Assuming we are at the root directory of the Manatee repository. We could train Manatee with the following code: 
+Assuming we are at the root directory of the Manatee repository: 
 
 ```
 vae=./src/train_vae.py
@@ -33,13 +33,11 @@ A pre-trained model can be found at ```./GSE72857/model/```
 
 **Model Benchmarking:**
 
-We examined whether Manatee is able to capture biological information, by benchmarking its two modes.
+We examined whether Manatee is able to capture biological information, by benchmarking its two modes:
 
 The “predict” mode encodes original transcriptomes (X), reparametrizes the latent space as decoder inputs Z*, and reconstructs X’.
 
 The “generate” mode, on the other hand, directly decodes X’ from Z*.
-
-We could benchmark Manatee with the following code:
 
 ```
 vae=./src/train_vae.py
