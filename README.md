@@ -37,7 +37,7 @@ We examined whether Manatee is able to capture biological information, by benchm
 
 The “predict” mode encodes original transcriptomes (X), reparametrizes the latent space as decoder inputs Z*, and reconstructs transcriptomes (X’).
 
-The “generate” mode directly decodes X’ from Z*.
+The “generate” mode, on the other hand, directly decodes X’ from Z*.
 
 We could benchmark Manatee with the following code:
 
