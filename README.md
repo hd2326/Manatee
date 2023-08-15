@@ -33,7 +33,13 @@ A pre-trained model can be found at ```./GSE72857/model/```
 
 **Model Benchmarking:**
 
-We examined whether Manatee is able to capture biological information, by benchmarking its two modes. The “predict” mode encodes original transcriptomes (X), reparametrizes the latent space as decoder inputs Z*, and reconstructs transcriptomes (X’). The “generate” mode, on the other hand, directly decodes X’ from Z*. We could benchmark Manatee with the following code:
+We examined whether Manatee is able to capture biological information, by benchmarking its two modes.
+
+The “predict” mode encodes original transcriptomes (X), reparametrizes the latent space as decoder inputs Z*, and reconstructs transcriptomes (X’).
+
+The “generate” mode directly decodes X’ from Z*.
+
+We could benchmark Manatee with the following code:
 
 ```
 vae=./src/train_vae.py
