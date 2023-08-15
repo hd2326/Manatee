@@ -78,4 +78,19 @@ The result shows the recapitulation of the lineage bifurcation:
 
 **_In Silico_ Screening**
 
-We use Manatee to model th
+We leverage Manatee for the _in silico_ screening of perturbations that could yield the target transcriptomic phenotype. As a proof-of-concept, we screened alternative TF duos driving the above hematopoiesis process. Without losing generality, we screened all 25 combinations of the top 5 highly expressed TFs within MEP and GMP:
+
+```
+vae=./src/train_vae.py
+gene_path=./GSE72857/processed/genes.txt
+tf_path=./GSE72857/processed/tfs.txt
+model_path=./GSE72857/model/GSE72857best_fold.pt
+z_path=./GSE72857/screen/z_screen.csv.gz
+out_dir=./GSE72857/screen/
+
+python3 $vae --job=screen --mode=generate --data_path=$z_path --gene_path=$gene_path --tf_path=$tf_path --model_path=$model_path --out_dir=$out_dir --depth=3
+```
+
+The result shows the Gata1-Cebpa duo to be an alternative lineage controlling module. Noticeably, Cebpa has been experimentally validated as a master regulator controlling the identity of GMP:
+
+![screen](https://github.com/hd2326/Manatee/blob/main/images/screen.png)
