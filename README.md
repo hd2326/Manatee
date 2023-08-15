@@ -26,12 +26,29 @@ gene_path=./GSE72857/processed/genes.txt
 tf_path=./GSE72857/processed/tfs.txt
 out_dir=./GSE72857/model/
 
-python3 $vae --job=$job --data_path=$data_path --gene_path=$gene_path --tf_path=$tf_path --out_dir=$out_dir
+python3 $vae --job=$job --data_path=$data_path --gene_path=$gene_path --tf_path=$tf_path --out_dir=$out_dir --depth=3
 ```
 
 A pre-trained model can be found at ```./GSE72857/model/```
 
 **Model Benchmarking:**
 
-We examined whether Manatee is able to capture biological information, by benchmarking its two modes. The “predict” mode encodes original transcriptomes (X), reparametrizes the latent space as decoder inputs Z*, and reconstructs transcriptomes (X’). The “generate” mode, on the other hand, directly decodes X’ from Z*.
+We examined whether Manatee is able to capture biological information, by benchmarking its two modes. The “predict” mode encodes original transcriptomes (X), reparametrizes the latent space as decoder inputs Z*, and reconstructs transcriptomes (X’). The “generate” mode, on the other hand, directly decodes X’ from Z*. We could benchmark Manatee with the following code:
+
+```
+vae=./src/train_vae.py
+gene_path=./GSE72857/processed/genes.txt
+tf_path=./GSE72857/processed/tfs.txt
+model_path=./GSE72857/model/GSE72857best_fold.pt
+x_path=./GSE72857/processed/data_x.csv.gz
+z_path=./GSE72857/processed/data_z.csv.gz
+out_dir=./GSE72857/benchmark/
+
+python3 $vae --job=basic --mode=predict --data_path=$x_path --gene_path=$gene_path --tf_path=$tf_path --model_path=$model_path --out_dir=$out_dir --depth=3
+python3 $vae --job=basic --mode=generate --data_path=$z_path --gene_path=$gene_path --tf_path=$tf_path --model_path=$model_path --out_dir=$out_dir --depth=3
+```
+
+And here are the results:
+
+![benchmark](https://github.com/hd2326/Manatee/blob/main/images/benchmark.png)
 
