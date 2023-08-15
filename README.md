@@ -54,13 +54,13 @@ python3 $vae --job=basic --mode=predict --data_path=$x_path --gene_path=$gene_pa
 python3 $vae --job=basic --mode=generate --data_path=$z_path --gene_path=$gene_path --tf_path=$tf_path --model_path=$model_path --out_dir=$out_dir --depth=3
 ```
 
-The results show that both modes could recapitulate original transcriptomes (X'=X):
+The result shows that both modes could recapitulate original transcriptomes (X'=X):
 
 ![benchmark](https://github.com/hd2326/Manatee/blob/main/images/benchmark.png)
 
 **_In Silico_ Perturbation**
 
-We use Manatee to 
+We use Manatee to model the hematopoietic CMP to GMP VS MEP development, which is driven by the Gata1-Spi1 TF module:
 
 ```
 vae=./src/train_vae.py
@@ -72,3 +72,10 @@ out_dir=./GSE72857/perturb/
 
 python3 $vae --job=perturb --mode=generate --data_path=$z_path --gene_path=$gene_path --tf_path=$tf_path --model_path=$model_path --out_dir=$out_dir --depth=3
 ```
+The result shows the recapitulation of lineage bifurcation:
+
+![perturb](https://github.com/hd2326/Manatee/blob/main/images/perturb.png)
+
+**_In Silico_ Screening**
+
+We use Manatee to model th
