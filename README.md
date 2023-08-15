@@ -33,7 +33,7 @@ A pre-trained model can be found at ```./GSE72857/model/```
 
 **Model Benchmarking:**
 
-We examined whether Manatee is able to capture biological information, by benchmarking its two modes:
+We examine whether Manatee is able to capture biological information, by benchmarking its two modes:
 
 The “predict” mode encodes original transcriptomes (X), reparametrizes the latent space as decoder inputs Z*, and reconstructs X’.
 
@@ -56,4 +56,6 @@ And here are the results, which show that both modes could recapitulate original
 
 ![benchmark](https://github.com/hd2326/Manatee/blob/main/images/benchmark.png)
 
+**_In Silico_ Perturbation**
 
+We use Manatee to 
