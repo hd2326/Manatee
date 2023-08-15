@@ -72,7 +72,7 @@ out_dir=./GSE72857/perturb/
 
 python3 $vae --job=perturb --mode=generate --data_path=$z_path --gene_path=$gene_path --tf_path=$tf_path --model_path=$model_path --out_dir=$out_dir --depth=3
 ```
-The result shows the recapitulation of lineage bifurcation:
+The result shows the recapitulation of the lineage bifurcation:
 
 ![perturb](https://github.com/hd2326/Manatee/blob/main/images/perturb.png)
 
