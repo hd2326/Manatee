@@ -1,6 +1,6 @@
-# Manatee
+# Manatee: a Variational Autoencoder Model for Predicting Gene Expression Alterations Caused by Transcription Factor Perturbations
 
-## Overvie
+## Overview
 
 Manatee variational autoencoder (VAE) model predicts transcription factor (TF) perturbation-induced transcriptomes. The workflow of Manatee is shown in the following schematics. Specifically:
 
@@ -12,13 +12,13 @@ To assess if a perturbation yields the desired transcriptomic phenotype, the rel
 
 ![Manatee](https://github.com/hd2326/Manatee/blob/main/images/manatee.png)
 
-## **Data Processing**
+## Data Processing
 
 We use the [GSE72857](https://pubmed.ncbi.nlm.nih.gov/26627738/) dataset as an example to show the Manatee functions.
 
 Assuming we are at the root directory of the Manatee repository. The rawdata is in ```./GSE72857/processed/```. Further data processing for sections **_In Silico_ Perturbation** and **_In Silico_ Screening** can be done by running ```processed.R```. The yielded data files are provided in ```./GSE72857/perturb/``` and ```./GSE72857/screen/``` respectively for reproducing our results.
 
-## **Model Training:**
+## Model Training:
 
 ```
 vae=./src/train_vae.py
@@ -33,7 +33,7 @@ python3 $vae --job=$job --data_path=$data_path --gene_path=$gene_path --tf_path=
 
 A pre-trained model can be found [here](https://pubmed.ncbi.nlm.nih.gov/26627738/). You will need to download it into ```./GSE72857/model/``` to run the following code chunks.
 
-## **Model Benchmarking:**
+## Model Benchmarking:
 
 We examine whether Manatee is able to capture biological information, by benchmarking its two modes:
 
@@ -58,7 +58,7 @@ The result shows that both modes could recapitulate original transcriptomes (X'=
 
 ![benchmark](https://github.com/hd2326/Manatee/blob/main/images/benchmark.png)
 
-## **_In Silico_ Perturbation**
+## _In Silico_ Perturbation
 
 We use Manatee to model the hematopoietic CMP to GMP VS MEP development, which is driven by the Gata1-Spi1 TF module:
 
@@ -76,7 +76,7 @@ The result shows the recapitulation of the lineage bifurcation:
 
 ![perturb](https://github.com/hd2326/Manatee/blob/main/images/perturb.png)
 
-## **_In Silico_ Screening**
+## _In Silico_ Screening
 
 We leverage Manatee for the _in silico_ screening of perturbations that could yield the target transcriptomic phenotype. As a proof-of-concept, we screened alternative TF duos driving the above hematopoiesis process. Without losing generality, we screened all 25 combinations of the top 5 highly expressed TFs within MEP and GMP:
 
