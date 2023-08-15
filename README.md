@@ -1,4 +1,4 @@
-# Manatee: a Variational Autoencoder Model for Predicting Gene Expression Alterations Caused by Transcription Factor Perturbations
+# Manatee: a Variational Autoencoder Model for Predicting Transcription Factor Perturbation-Induced Transcriptomes
 
 ## Overview
 
