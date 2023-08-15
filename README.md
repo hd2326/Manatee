@@ -91,6 +91,6 @@ out_dir=./GSE72857/screen/
 python3 $vae --job=screen --mode=generate --data_path=$z_path --gene_path=$gene_path --tf_path=$tf_path --model_path=$model_path --out_dir=$out_dir --depth=3
 ```
 
-The result shows the Gata1-Cebpa duo to be an alternative lineage controlling module. Noticeably, Cebpa has been experimentally validated as a master regulator controlling the identity of GMP:
+The result shows the _Gata1-Cebpa_ duo to be an alternative lineage controlling module. Noticeably, _Cebpa_ has been experimentally validated as a master regulator controlling the identity of GMP:
 
 ![screen](https://github.com/hd2326/Manatee/blob/main/images/screen.png)
