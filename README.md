@@ -31,7 +31,7 @@ out_dir=./GSE72857/model/
 python3 $vae --job=$job --data_path=$data_path --gene_path=$gene_path --tf_path=$tf_path --out_dir=$out_dir --cv=5 --lr=1e-4 --depth=3 --alpha=0.8
 ```
 
-A pre-trained model can be found [here](https://pubmed.ncbi.nlm.nih.gov/26627738/). You will need to download it into ```./GSE72857/model/``` to run the following code chunks.
+A pre-trained model can be found [here](https://visualify.pharmacy.arizona.edu/Manatee/GSE72857best_fold.pt). You will need to download it into ```./GSE72857/model/``` to run the following code chunks.
 
 ## Model Benchmarking:
 
