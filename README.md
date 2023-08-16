@@ -60,7 +60,7 @@ The result shows that both modes could recapitulate original transcriptomes (X'=
 
 ## _In Silico_ Perturbation
 
-We use Manatee to model the hematopoietic CMP to GMP VS MEP development, which is driven by the Gata1-Spi1 TF module:
+We use Manatee to model the hematopoietic CMP to GMP VS MEP development, which is driven by the _Gata1-Spi1_ TF module:
 
 ```
 vae=./src/train_vae.py
