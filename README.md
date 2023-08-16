@@ -94,3 +94,7 @@ python3 $vae --job=screen --mode=generate --data_path=$z_path --gene_path=$gene_
 The result shows the _Gata1-Cebpa_ duo to be an alternative lineage controlling module. Noticeably, _Cebpa_ has been experimentally validated as a master regulator controlling the identity of GMP:
 
 ![screen](https://github.com/hd2326/Manatee/blob/main/images/screen.png)
+
+## A Comprehensive Model for Mouse Development
+
+We speculate the great value of “comprehensive models”, which represent all major biological processes related to a certain species. We thus provide [a Manatee model](https://visualify.pharmacy.arizona.edu/Manatee/TOMEbest_fold.pt) trained from the [TOME](http://tome.gs.washington.edu/) mouse embryogenesis single cell dataset, which contains 468 cell populations and 113 lineages. Such a model can be used for mouse _in silico_ perturbation and _in silico_ screening analyses, as well as for further algorithmic developments.
